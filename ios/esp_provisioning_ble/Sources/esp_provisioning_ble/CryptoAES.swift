@@ -19,6 +19,10 @@
 import CommonCrypto
 import Foundation
 
+#if SWIFT_PACKAGE
+  import esp_provisioning_ble_objc
+#endif
+
 class CryptoAES {
     var iv: Data
     var key: Data

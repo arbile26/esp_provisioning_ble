@@ -13,9 +13,10 @@ A new Flutter plugin project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'esp_provisioning_ble/Sources/**/*.{swift,h,m}'
+  s.public_header_files = 'esp_provisioning_ble/Sources/esp_provisioning_ble_objc/include/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '11.0'
+  s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

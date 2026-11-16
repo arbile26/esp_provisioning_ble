@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- iOS: Swift Package Manager support (`ios/esp_provisioning_ble/Package.swift`). The Objective-C AES wrapper is a target of its own because a Swift package target cannot mix languages. CocoaPods still works through the podspec.
+
+### Changed
+
+- iOS: the Swift plugin class is now `EspProvisioningBlePlugin` and registers directly; the Objective-C registration bridge is removed. The minimum iOS version is 12.0.
+
 ## [1.2.1] - 2026-11-15
 
 This patch release documents the whole public API and fixes two calls that could hang instead of failing. There are no changes to the Dart API; the only behavior changes are the two fixes below, which turn a hang into an error.
